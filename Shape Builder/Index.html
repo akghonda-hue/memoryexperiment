@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shape Builder</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      font-family: Arial, sans-serif;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    #stimulus-controls {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+      background: #252525;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+
+    #stimulus-controls label {
+      display: block;
+      margin: 8px 0;
+    }
+
+    #stimulus-controls.locked {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- This is where Shape Builder gets drawn -->
+  <canvas id="shape-builder"></canvas>
+
+  <!-- Controls for choosing stimulus types -->
+  <div id="stimulus-controls">
+
+    <strong>Stimulus Type</strong>
+
+    <label>
+      <input type="radio" name="stimulus-mode"
+             value="shapes" checked>
+      Shapes
+    </label>
+
+    <label>
+      <input type="radio" name="stimulus-mode"
+             value="images">
+      Custom Images
+    </label>
+
+    <label>
+      <input type="radio" name="stimulus-mode"
+             value="polygons">
+      Random Polygons
+    </label>
+
+    <label>
+      Upload Images:
+      <input type="file" id="custom-image-upload"
+             accept="image/*" multiple>
+    </label>
+
+    <label>
+      Upload Image Order:
+      <input type="file" id="custom-image-order-upload"
+             accept=".txt,.csv,.json">
+    </label>
+
+    <label>
+      Polygon Refresh:
+      <select id="polygon-refresh">
+        <option value="task">Same for task</option>
+        <option value="trial">New each trial</option>
+      </select>
+    </label>
+
+    <button id="generate-polygons">
+      Generate Polygons
+    </button>
+
+    <p id="stimulus-status"></p>
+
+  </div>
+
+  <!-- Connect this webpage to your JavaScript file -->
+  <script src="Edited - shapebuilder.js"></script>
+
+</body>
+</html>
