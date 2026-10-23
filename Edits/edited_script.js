@@ -691,22 +691,22 @@ function getShapeImageById(id) {
   // This lets the original sidebar HTML and scoring work without changes.
   // Within each color: California, Texas, Illinois, Maine.
   const shapeURLs = [
-    'shapes/circle-red.png',
-    'shapes/square-red.png',
-    'shapes/triangle-red.png',
-    'shapes/diamond-red.png',
-    'shapes/circle-blue.png',
-    'shapes/square-blue.png',
-    'shapes/triangle-blue.png',
-    'shapes/diamond-blue.png',
-    'shapes/circle-green.png',
-    'shapes/square-green.png',
-    'shapes/triangle-green.png',
-    'shapes/diamond-green.png',
-    'shapes/circle-yellow.png',
-    'shapes/square-yellow.png',
-    'shapes/triangle-yellow.png',
-    'shapes/diamond-yellow.png'
+    'shapes2/circle-red.png',
+    'shapes2/square-red.png',
+    'shapes2/triangle-red.png',
+    'shapes2/diamond-red.png',
+    'shapes2/circle-blue.png',
+    'shapes2/square-blue.png',
+    'shapes2/triangle-blue.png',
+    'shapes2/diamond-blue.png',
+    'shapes2/circle-green.png',
+    'shapes2/square-green.png',
+    'shapes2/triangle-green.png',
+    'shapes2/diamond-green.png',
+    'shapes2/circle-yellow.png',
+    'shapes2/square-yellow.png',
+    'shapes2/triangle-yellow.png',
+    'shapes2/diamond-yellow.png'
   ];
   if (img_files.length > 0){
     return URL.createObjectURL(img_files[id % img_files.length]);
